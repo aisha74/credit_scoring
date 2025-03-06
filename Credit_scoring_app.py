@@ -2,14 +2,11 @@ import streamlit as st
 import pickle
 import numpy as np
 from PIL import Image
+
 # Загрузка изображения
 file_path = r'C:\Users\khais\Downloads\Credit_score.jpg' 
-
-try:
-    img = Image.open(file_path)
-    st.image(img, caption='Credit Score Image', use_column_width=True)
-except FileNotFoundError:
-    st.error("Файл не найден! Проверьте путь к файлу.")
+img = Image.open(file_path)
+    
 # Загрузка модели
 @st.cache_resource
 def load_model():
