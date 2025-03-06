@@ -3,8 +3,6 @@ import pickle
 import numpy as np
 from PIL import Image
 
-image = Image.open(r'c:\Users\khais\Downloads\Credit_score.jpg')
-st.image(image)
 # Загрузка модели
 @st.cache_resource
 def load_model():
